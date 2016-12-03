@@ -1,0 +1,9 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri Dec 02 13:56:36 CST 2016
+http\://192.168.0.101\:8888/nexus/content/repositories/thirdparty/.error=
+http\://192.168.0.101\:8888/nexus/content/repositories/snapshots/.lastUpdated=1480658193934
+http\://192.168.0.101\:8888/nexus/content/repositories/thirdparty/.lastUpdated=1480658193920
+https\://repo.maven.apache.org/maven2/.lastUpdated=1480658196071
+http\://192.168.0.101\:8888/nexus/content/repositories/snapshots/.error=
+http\://192.168.0.101\:8888/nexus/content/repositories/releases/.lastUpdated=1480658193904
+http\://192.168.0.101\:8888/nexus/content/repositories/releases/.error=

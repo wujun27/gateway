@@ -1,0 +1,27 @@
+version: '2'
+services:
+    mygateway-cassandra:
+        container_name: mygateway-cassandra
+        image: cassandra:3.9
+        # volumes:
+        #     - ~/volumes/jhipster/myGateWay/cassandra/:/var/lib/cassandra/data
+        ports:
+            - 7000:7000
+            - 7001:7001
+            - 7199:7199
+            - 9042:9042
+            - 9160:9160
+    mygateway-cassandra-node:
+        image: cassandra:3.9
+        links:
+            - mygateway-cassandra:seed
+        environment:
+            - CASSANDRA_SEEDS=seed
+    mygateway-cassandra-migration:
+        extends:
+            file: cassandra-migration.yml
+            service: mygateway-cassandra-migration
+        links:
+            - mygateway-cassandra
+        environment:
+            - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql
